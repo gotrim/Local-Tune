@@ -1,0 +1,43 @@
+/*==========[Body]==================*/
+body {
+    margin: 0;
+  }
+/*==========[Fim Body]==================*/
+  
+/*==========[ Grid Barra lateral ]==================*/
+  #grid {
+    height: 100vh;
+  }
+  
+  #left {
+    padding: 5%;
+    text-align: center; 
+    background: crimson;
+  }
+  
+  #right {
+    padding: 5%;
+    text-align: center; 
+    background: navajowhite;
+  }
+  
+  #grid {
+    transition: 30ms;
+    display: grid;
+    grid-template-columns: 60px auto;
+  }
+  
+  #grid:has(#left:hover) {
+    grid-template-columns: 30% auto;
+  }
+  
+  #grid {
+    transition: 300ms;
+    display: grid;
+    grid-template-columns: var(--left, 60px) auto;
+  }
+  
+  #grid:has(#left:hover) {
+    --left: 30%;
+  }
+  /*==========[Fim Grid Barra lateral ]==================*/
