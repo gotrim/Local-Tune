@@ -1,3 +1,4 @@
+/*==========[Celular]====================*/
 /*==========[Body]==================*/
 body {
     margin: 0;
@@ -13,6 +14,9 @@ body {
     padding: 5%;
     text-align: center; 
     background: crimson;
+  }
+  .text_left{
+    display: none;
   }
   
   #right {
@@ -39,5 +43,12 @@ body {
   
   #grid:has(#left:hover) {
     --left: 30%;
+    .text_left{
+      display: block;
+      
+      
+      
+    }
   }
+  
   /*==========[Fim Grid Barra lateral ]==================*/
