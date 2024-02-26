@@ -1,17 +1,33 @@
-/*==========[Celular]====================*/
+/*==========[Web Desktop]====================*/
 
 
 /*==========[Body]==================*/
 body {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
   }
 /*==========[Fim Body]==================*/
 
 
 /*==========[Header]==================*/
 header {
-
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: right;
+  position: fixed;
+  background-color: antiquewhite;
 }
+#searchForm{
+  align-self: right;
+  display: flex;
+  border: 0.5px;
+  border-color: #9b9b9b;
+  height: 30px;
+  font-size: 1.3em;
+}
+
+
 /*==========[Fim Header]==================*/
 
 
@@ -23,7 +39,8 @@ header {
   #left {
     padding: 5%;
     text-align: center; 
-    background: crimson;
+    background:crimson;
+    
   }
   
   #right {
@@ -39,7 +56,7 @@ header {
   }
   
   #grid:has(#left:hover) {
-    grid-template-columns: 30% auto;
+    grid-template-columns: 15% auto;
   }
   
   #grid {
@@ -57,7 +74,47 @@ header {
 
   .text_left{
     display: none;
+    text-align: left;
+    padding-left: 10px;
   }
 
 
   /*==========[Fim Grid Barra lateral ]==================*/
+  
+/*==========[Estilo grid Right]==================*/
+#right{
+  align-content: center;
+} 
+
+.publi-basic{
+  padding: 50px;
+  margin-bottom: 100px;
+  text-align: left;
+  width: 600px;
+  height: 300px;
+
+}
+.perfil{
+  align-self: right;
+  background-color: #c7c7c7;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.fake-perfil-img{
+  background-color: #111111;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+.false-img{
+    background-color: #9b9b9b;
+    width: 600px;
+    height: 300px;
+  }
+    
+  
+
+/*==========[Fim Estilo grid Right]==================*/
