@@ -83,6 +83,15 @@ header {
   /*==========[Fim Grid Barra lateral ]==================*/
   
 /*==========[Estilo grid Right]==================*/
+
+#fundo1{
+  padding: 50px;
+  margin-bottom: 100px;
+  text-align: left;
+  width: 600px;
+  height: 300px;
+}
+
 #right{
   align-content: center;
 } 
