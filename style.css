@@ -84,13 +84,18 @@ header {
   
 /*==========[Estilo grid Right]==================*/
 
-#fundo1{
+.fundo1{
+  flex-wrap: wrap;
   display: flex;
   background-color: #9b9b9b;
-  width: 600px;
-  height: 300px;
+  width: 800px;
+  height: auto;
   margin-top: 50px;
   margin-left: 25px;
+  border-radius: 30px 30px 0px 0px;
+  border: 3px solid #424242;
+
+
 }
 
 #right{
@@ -99,11 +104,11 @@ header {
 
 .publi-basic{
   padding: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   text-align: left;
   width: 600px;
   height: 300px;
-
+  
 }
 .perfil{
   align-self: right;
@@ -121,8 +126,9 @@ header {
   border-radius: 100%;
 }
 .false-img{
+  
     display: flex;
-    background-color: #9b9b9b;
+    background-color: #D9D9D9;
     width: 600px;
     height: 300px;
   }
