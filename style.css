@@ -85,11 +85,12 @@ header {
 /*==========[Estilo grid Right]==================*/
 
 #fundo1{
-  padding: 50px;
-  margin-bottom: 100px;
-  text-align: left;
+  display: flex;
+  background-color: #9b9b9b;
   width: 600px;
   height: 300px;
+  margin-top: 50px;
+  margin-left: 25px;
 }
 
 #right{
