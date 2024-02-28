@@ -19,13 +19,14 @@ header {
   position: fixed;
   background-color: antiquewhite;
 }
-#searchForm{
-  align-self: right;
-  display: flex;
-  border: 0.5px;
-  border-color: #9b9b9b;
-  height: 30px;
-  font-size: 1.3em;
+#searchForm {
+  text-align: right;
+}
+
+#searchForm input[type="text"],
+#searchForm button {
+  display: inline-block;
+  vertical-align: top;
 }
 
 
@@ -105,7 +106,7 @@ header {
   padding: 50px;
   margin-bottom: 50px;
   text-align: left;
-  width: 600px;
+  width: auto;
   height: 300px;
   
 }
