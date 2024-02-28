@@ -19,14 +19,13 @@ header {
   position: fixed;
   background-color: antiquewhite;
 }
-#searchForm {
-  text-align: right;
-}
-
-#searchForm input[type="text"],
-#searchForm button {
-  display: inline-block;
-  vertical-align: top;
+#searchForm{
+  display: flex;
+  height: 30px;
+  font-size: 1.3em;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 
@@ -86,6 +85,7 @@ header {
 /*=================[Estilo grid Right]===================*/
 
 .fundo1{
+  padding: 50px;
   flex-wrap: wrap;
   display: flex;
   background-color: #9b9b9b;
@@ -93,6 +93,7 @@ header {
   height: auto;
   margin-top: 50px;
   margin-left: 25px;
+  margin-right: 50px;
   border-radius: 30px 30px 0px 0px;
   border: 3px solid #424242;
 
@@ -103,12 +104,12 @@ header {
 } 
 
 .publi-basic{
-  padding: 50px;
   margin-bottom: 50px;
   text-align: left;
   width: auto;
   height: 300px;
-  
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .perfil{
   width: 210px;
@@ -121,31 +122,39 @@ header {
   border: 3px solid #424242;
   background: #BCBCBC;
 }
-.fake-perfil-img{
-  background-color: #111111;
+.fake-perfil-img {
+  margin-top: 150px;
+  border: 3px solid #424242;
+  background-color: #D9D9D9;
   height: 50px;
   width: 50px;
   border-radius: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .false-img{
-  
-  width: 210px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 190px;
   height: 120px;
   flex-shrink: 0;
   display: flex;
   border-radius: 0px 0px 10px 10px;
   border: 3px solid #424242;
   background: #D9D9D9;
+  border-top-width: 0px;
   }
     
 /*==========[Fim Estilo grid Right]==================*/
 
 /*==========[Textos]=================================*/
 
-#p{
+p{    
+  margin-top: 30px;
+  height: 80px;
   color: #000;
-  font-family: Inter;
-  font-size: 12px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
