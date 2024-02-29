@@ -3,9 +3,9 @@
 
 /*======================[Body]=======================*/
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 /*======================[Fim Body]==================*/
 
@@ -34,51 +34,50 @@ header {
 
 /*=============[ Grid Barra lateral ]=============*/
   #grid {
-    height: 100vh;
-  }
+  height: 100vh;
+}
   
   #left {
-    padding: 5%;
-    text-align: center; 
-    background:crimson;
-    
-  }
+  padding: 5%;
+  text-align: center; 
+  background:crimson;    
+}
   
   #right {
-    display: flex;
-    padding: 0;
-    text-align: center; 
-    background: navajowhite;
-  }
+  display: flex;
+  padding: 0;
+  text-align: center; 
+  background: navajowhite;
+}
   
   #grid {
-    transition: 30ms;
-    display: grid;
-    grid-template-columns: 60px auto;
-  }
+  transition: 30ms;
+  display: grid;
+  grid-template-columns: 60px auto;
+}
   
   #grid:has(#left:hover) {
-    grid-template-columns: 15% auto;
-  }
+  grid-template-columns: 15% auto;
+}
   
   #grid {
-    transition: 300ms;
-    display: grid;
-    grid-template-columns: var(--left, 60px) auto;
-  }
+  transition: 300ms;
+  display: grid;
+  grid-template-columns: var(--left, 60px) auto;
+}
   
   #grid:has(#left:hover) {
-    --left: 30%;
-    .text_left{
-      display: block;
-    }
+  --left: 30%;
+  .text_left{
+  display: block;
   }
+}
 
   .text_left{
-    display: none;
-    text-align: left;
-    padding-left: 10px;
-  }
+  display: none;
+  text-align: left;
+  padding-left: 10px;
+}
 
 
   /*==========[Fim Grid Barra lateral ]==================*/
@@ -100,16 +99,22 @@ header {
 }
 
 .fundo2{
-  flex-wrap: wrap;
-  display: flex;
-  background-color: #9b9b9b;
+  display: block;
   width: auto;
   height: auto;
   margin-top: 50px;
   margin-left: 20px;
   margin-right: 25px;
-  border-radius: 30px 30px 0px 0px;
+}
+
+.juncao{
+  flex-wrap: wrap;
+  display: flex;
+  background-color: #9b9b9b;
+  width: 541px;
+  height: 120px;
   border: 3px solid #424242;
+  border-top-width: 0px;
 }
 
 .conta{
@@ -180,7 +185,7 @@ header {
   background: #D9D9D9;
   border-top-width: 0px;
   }
-    
+
 /*==========[Fim Estilo grid Right]==================*/
 
 /*==========[Textos]=================================*/
