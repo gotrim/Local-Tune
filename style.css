@@ -10,7 +10,7 @@ body {
 /*======================[Fim Body]==================*/
 
 
-/*=======================[Header]===================*/
+/*=======================[Header]===================
 header {
   width: 100%;
   display: flex;
@@ -27,12 +27,12 @@ header {
   top: 0;
   right: 0;
 }
-
-
+*/
 /*================[Fim Header]=====================*/
 
 
 /*=============[ Grid Barra lateral ]=============*/
+
   #grid {
   height: 100vh;
 }
@@ -78,7 +78,6 @@ header {
   text-align: left;
   padding-left: 10px;
 }
-
 
   /*==========[Fim Grid Barra lateral ]==================*/
   
