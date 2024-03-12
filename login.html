@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>SV Info</title>
+  <link rel="icon" type="images/logo_topo.png" href="/images/logo_topo.png">
+  <link href="estilo/estilo.css" rel="stylesheet" type="text/css" />
+  <script src="scripte.js"></script>
+</head>
+
+<body>
+  <section>
+
+    <div id="erroContainer" class="erroContainer"></div>
+    <form id="formulario" onsubmit="salvarDados(event)">
+      <div class="div">
+        <h1>Cadastro</h1>
+      </div>
+      <div class="nomes">
+        <label class="name" for="nome">Seu Nome:</label>
+        <input class="inserir" id="nome" name="nome" maxlength="60" placeholder="Arthur Guilherme Mellancello">
+      </div>
+      <div class="nomes">
+        <label class="name" for="email">Seu Email: </label>
+        <input class="inserir2" id="email" name="email" maxlength="60" placeholder="rafamelhorprof@email.com">
+      </div>
+
+      <div class="botao">
+        <button type="submit" class="enviar">Enviar</button>
+      </div>
+    </form>
+    <a href="index.html"><button class="voltar">Voltar</button></a>
+  </section>
+  <div id="successMessage" class="success-message" style="display: none;">
+    Mensagem enviada!
+  </div>
+  <table id="tabelaValoresRegistrados"></table>
+
+  <script>
+
+  </script>
+</body>
+
+</html>
