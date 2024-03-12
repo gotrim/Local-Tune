@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="estilo/style.css">
     <title>LocalTune</title>
 </head>
 <body>
-    <main>
-        <div class="divSearch">
-            <input type="search">
-        </div>
-        <div class="content"></div>
-    </main>
+    <header>
+        <form id="searchForm" method="get">
+            <input type="text" placeholder="Pesquisar..." id="search">
+            <button type="submit">Pesquisar</button>
+        </form>
+    </header>
     <div id="grid">
         <div id="left"> 
             <div class="text_left">
                 <h3>Home</h3>
                 <h3>Explorar</h3>
-                <a href="login.html"><button class="voltar">Login</button></a><!--se logado vira perfil-->
+                <a href="login.html">Login</a><!--se logado vira perfil-->
                 <h3></h3>
 
             </div>
