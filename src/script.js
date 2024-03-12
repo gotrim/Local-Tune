@@ -7,7 +7,7 @@
             alert("NATHAM GAY");
         }
     });
-})*/
+})
 
 const content = document.querySelector(".content");
 const search = document.querySelector("input[type='search']");
