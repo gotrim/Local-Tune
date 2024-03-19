@@ -46,7 +46,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
         });
     });
 
-/*====================================*/
+/*====================================
 
 //CODIGO DO ARTHUR B. ATUALIZAR PARA LIGAR COM O BANCO NO FUTURO
 
@@ -143,4 +143,4 @@ function salvarDados(event) {
     }
   }
   
-  preencherVariaveisForm();
+  preencherVariaveisForm();*/
