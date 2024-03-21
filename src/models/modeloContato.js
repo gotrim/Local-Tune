@@ -1,8 +1,8 @@
-const { conecSequelize } = require('../config/banco/coneccao')
+const { connSequelize } = require('../../config/coneccao')
 const { DataTypes} = require ('sequelize')
-const { _padraoTableBDExistence } = require('../config/banco/confdobanco')
+const { _padraoTableBDExistence } = require('../../config/confdobanco')
 
-const Contato = conecSequelize.define('tb_contato', {
+const tb_contato = connSequelize.define('tb_contato', {
     cd_contato: {
         type: DataTypes.INTEGER.UNSIGNED,
         allowNull: false,
@@ -18,6 +18,7 @@ const Contato = conecSequelize.define('tb_contato', {
         allowNull: false
     }
 }, _padraoTableBDExistence('tb_contato'));
+
 module.exports = {
-    Contato
+    tb_contato
 };

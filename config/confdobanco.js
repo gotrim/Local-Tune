@@ -1,4 +1,4 @@
-function _padraoTableBDExistente(typedTableNm) {
+function _padraoTableBDExistence(typedTableNm) {
     return {
         timestamps: false,
         freezeTableName: true,
@@ -6,6 +6,6 @@ function _padraoTableBDExistente(typedTableNm) {
     }
 }
 
-module.exports = { _padraoTableBDExistente }
+module.exports = { _padraoTableBDExistence }
 
 // mudar o local host e colocar a entrada da sua casa

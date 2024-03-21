@@ -1,6 +1,6 @@
-const { conecSequelize } = require('../config/banco/coneccao')
+const { connSequelize } = require('./config/coneccao')
 const { DataTypes} = require ('sequelize')
-const { _padraoTableBDExistence } = require('../config/banco/confdobanco')
+const { _padraoTableBDExistence } = require('./config/confdobanco')
 
 Endereco = conecSequelize.define('tb_endereco', {
     cd_endereco: {

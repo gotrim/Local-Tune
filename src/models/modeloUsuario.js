@@ -1,6 +1,6 @@
-const { conecSequelize } = require('../config/banco/coneccao')
+const { connSequelize } = require('../config/coneccao')
 const { DataTypes} = require ('sequelize')
-const { _padraoTableBDExistence } = require('../config/banco/confdobanco')
+const { _padraoTableBDExistence } = require('../config/confdobanco')
 
 Usuario = conecSequelize.define('tb_usuario', {
     cd_usuario: {
@@ -17,10 +17,14 @@ Usuario = conecSequelize.define('tb_usuario', {
         type: DataTypes.INTEGER.UNSIGNED,
         allowNull: false
     },
-    cd_musico: {
+    cd_tipoUsuario:{
         type: DataTypes.INTEGER.UNSIGNED,
-        allowNull: true
+        allowNull: false
     },
+    nm_usuario:{
+        type:DataTypes.TEXT(30),
+    } ,
+
     cd_estabelecimento: {
         type: DataTypes.INTEGER.UNSIGNED,
         allowNull: true

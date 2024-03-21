@@ -1,6 +1,6 @@
-const { conecSequelize } = require('../config/banco/coneccao')
+const { connSequelize } = require('./config/coneccao')
 const { DataTypes} = require ('sequelize')
-const { _padraoTableBDExistence } = require('../config/banco/confdobanco')
+const { _padraoTableBDExistence } = require('./config/confdobanco')
 
 TiMusic = conecSequelize.define('tb_tipoMusical',{
     cd_tipoMusical:{

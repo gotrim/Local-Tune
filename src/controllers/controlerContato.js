@@ -1,11 +1,19 @@
-const {ModeContato} = require('../config/models/modeloContato.js')
+const { connSequelize, BD } = require('../../config/coneccao')
+const mysql = require('mysql2')
+const express = require('express')
+const {tb_contato} = require ('../models/modeloContato')
 
-module.exports = {
-    ProcTudoDadosRep: async (req, resp) => {
-        const Contato = await ModeContato.findAll({ raw: true });
-        return Contato;
-    },
-    ProcEspecificoDadosRep: async (req, resp) => {
-        return await ModeContato.findByPk(req.params.id, { raw: true });
-    }
-};
+
+
+connSequelize.sync()
+
+async function runServer() {
+
+    let resultBusca =  await tb_contato.findAll({
+        raw: true
+    })
+
+    console.log(resultBusca) 
+}
+
+runServer()
