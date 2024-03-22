@@ -1,11 +1,18 @@
-const {ModeMusica} = require('../config/models/modeloUsuario.js')
+const { connSequelize, BD } = require('../../config/coneccao')
+const mysql = require('mysql2')
+const express = require('express')
+const {tb_usuario} = require ('../models/modeloUsuario')
 
-module.exports = {
-    ProcTudoDadosRep: async (req, resp) => {
-        const Musico = await ModeMusica.findAll({ raw: true });
-        return Musico;
-    },
-    ProcEspecificoDadosRep: async (req, resp) => {
-        return await ModeMusica.findByPk(req.params.id, { raw: true });
-    }
-};
+
+connSequelize.sync()
+
+async function runServer() {
+
+    let resultBusca =  await tb_usuario.findAll({
+        raw: true
+    })
+
+    console.log(resultBusca) 
+}
+
+runServer()

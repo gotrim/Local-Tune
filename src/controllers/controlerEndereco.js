@@ -1,11 +1,18 @@
-const {ModeEndereco} = require('../config/models/modeloEndereco.js')
+const { connSequelize, BD } = require('../../config/coneccao')
+const mysql = require('mysql2')
+const express = require('express')
+const {tb_endereco} = require ('../models/modeloEndereco')
 
-module.exports = {
-    ProcTudoDadosRep: async (req, resp) => {
-        const Endereco = await ModeEndereco.findAll({ raw: true });
-        return Endereco;
-    },
-    ProcEspecificoDadosRep: async (req, resp) => {
-        return await ModeEndereco.findByPk(req.params.id, { raw: true });
-    }
-};
+
+connSequelize.sync()
+
+async function runServer() {
+
+    let resultBusca =  await tb_endereco.findAll({
+        raw: true
+    })
+
+    console.log(resultBusca) 
+}
+
+runServer()

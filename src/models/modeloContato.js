@@ -4,7 +4,7 @@ const { _padraoTableBDExistence } = require('../../config/confdobanco')
 
 const tb_contato = connSequelize.define('tb_contato', {
     cd_contato: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true

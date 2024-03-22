@@ -1,8 +1,8 @@
 const { connSequelize, BD } = require('./config/coneccao')
 const mysql = require('mysql2')
 const express = require('express')
-const {tb_contato} = require('./src/controllers/controlerContato.js')
-const {Query} = require ('./src/controllers/controlerContato.js')
+const {Query} = require ('./src/controllers/controlerTipoUsuario')
+
 
 
 connSequelize.authenticate().then(() => {

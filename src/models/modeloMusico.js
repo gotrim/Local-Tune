@@ -1,17 +1,23 @@
-const { connSequelize } = require('./config/coneccao')
+const { connSequelize } = require('../../config/coneccao')
 const { DataTypes} = require ('sequelize')
-const { _padraoTableBDExistence } = require('./config/confdobanco')
+const { _padraoTableBDExistence } = require('../../config/confdobanco')
+const {tb_tipo} = require ('./modeloMusico');
+const { tb_tipoMusical } = require('./modeloTipoMusica');
 
-Musico = conecSequelize.define('tb_musico', {
+tb_musico = connSequelize.define('tb_musico', {
     cd_musico: {
-        type: DataTypes.INTEGER.UNSIGNED,
+        type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
     },
     cd_tipoMusical: {
-        type: DataTypes.INTEGER.UNSIGNED,
-        allowNull: false
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        reference: {
+            model: 'tb_tipoMusical',
+            key: 'cd_tipoMsuical'
+        }
     },
     cd_cpf: {
         type: DataTypes.CHAR(14),
@@ -19,6 +25,9 @@ Musico = conecSequelize.define('tb_musico', {
     }
 }, _padraoTableBDExistence('tb_musico'));
 
+tb_musico.hasMany(tb_tipoMusical, {foreignKey: 'cd_musico'});
+tb_tipoMusical.belongsTo(tb_musico, {foreignKey: 'cd_musico'});
+
 module.exports ={
-    Musico
+    tb_musico
 }
