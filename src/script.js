@@ -1,4 +1,4 @@
-const conecSequelize = require('./config/banco/coneccao');
+const { connSequelize, BD } = require('../config/coneccao')
 require('./associacoes'); // Importa o arquivo de associações
 
 // parte do arthur M
