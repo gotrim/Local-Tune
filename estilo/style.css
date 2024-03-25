@@ -231,6 +231,64 @@ p{
   font-weight: 400;
   line-height: normal;
 }
+ul{
+  list-style: none;
+}
+/*===========[Barra de pesquisa]==========*/
 
-/*===========[//CODIGO DO ARTHUR B. ATUALIZAR PARA LIGAR COM O BANCO NO FUTURO]==========*/
+.buscar {
+  width: 100%;
+  background: #eee;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
+input{
+  width: 90%;
+  height: 50px;
+  padding-left: 20px;
+  font-size: 22px;
+  border:1px solid #ddd;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+img {
+  max-width: 70px;
+}
+
+#Lista{
+  display: none;
+  width: 90%;
+  background: #fff;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 75px;
+}
+#Lista li a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  border:1px solid #ddd;
+  margin-bottom: 5px;
+  padding: 8px;
+}
+
+#Lista li a:hover{
+  transition: 0.3s;
+  background: #d6d6d6;
+}
+h1, p{
+  margin-left: 5%;
+}
+
+.testo{
+  margin-left: 5px;
+}

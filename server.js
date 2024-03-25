@@ -10,3 +10,4 @@ connSequelize.authenticate().then(() => {
 }).catch(erroConn => {
     console.error(`erro ao conectar no banco ${BD}`, erroConn)
 }) 
+
