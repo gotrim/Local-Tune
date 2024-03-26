@@ -1,13 +1,11 @@
-const { connSequelize, BD } = require('./config/coneccao')
-const mysql = require('mysql2')
-const express = require('express')
-const {Query} = require ('./src/controllers/controlerTipoUsuario')
+const express = require('express');
+const app = express();
+const loginRoutes = require('caminho/para/seu/arquivo/routes');
 
+app.use(express.json()); // Para parsear JSON no corpo das requisições
+app.use('/api', loginRoutes); // Adicione suas rotas ao app
 
-
-connSequelize.authenticate().then(() => {
-    console.log(`Conexão com sucesso ${BD}`)
-}).catch(erroConn => {
-    console.error(`erro ao conectar no banco ${BD}`, erroConn)
-}) 
-
+// Inicia o servidor
+app.listen(3000, () => {
+    console.log('Servidor rodando na porta 3307');
+});

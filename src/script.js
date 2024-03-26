@@ -1,7 +1,6 @@
 const { connSequelize, BD } = require('../config/coneccao')
 require('./associacoes'); // Importa o arquivo de associações
 
-// parte do arthur M
 fetch('http://localhost:8000/')
 .then(res => res.json())
 .then((json) => {
@@ -14,6 +13,15 @@ fetch('http://localhost:8000/')
       <img src="${tb_usuario.nm_usuario}">
       <span class="testo">${tb_usuario.cd_senha}</span>
     </a>`;
+    /*<div class="publi-basic">
+                <div class="perfil">
+                    <div class="fake-perfil-img">
+                    </div>
+                </div>
+                <div class="false-img">
+                    <p>Colocamos um Terra planista e um cientis para conversar sem que os dois soubensem</p>
+                </div>
+            </div> */
     ul.appendChild(li);
   })
 })
@@ -49,3 +57,4 @@ function filtrar() {
 
   ul.style.display = count === 0 ? "none" : "block";
 }
+
