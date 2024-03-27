@@ -1,7 +1,4 @@
-const { connSequelize, BD } = require('../config/coneccao')
-require('./associacoes'); // Importa o arquivo de associações
-
-fetch('http://localhost:8000/')
+fetch('http://localhost:8000/musicos.json')
 .then(res => res.json())
 .then((json) => {
   console.log(json);
@@ -13,15 +10,6 @@ fetch('http://localhost:8000/')
       <img src="${tb_usuario.nm_usuario}">
       <span class="testo">${tb_usuario.cd_senha}</span>
     </a>`;
-    /*<div class="publi-basic">
-                <div class="perfil">
-                    <div class="fake-perfil-img">
-                    </div>
-                </div>
-                <div class="false-img">
-                    <p>Colocamos um Terra planista e um cientis para conversar sem que os dois soubensem</p>
-                </div>
-            </div> */
     ul.appendChild(li);
   })
 })
@@ -30,7 +18,7 @@ function filtrar() {
   var input, filter, ul, li, a, i, txtValue, span, count = 0;
 
   input = document.getElementById("idbusca");
-  ul = document.getElementById("Lista"); // Ajuste para o ID correto, se necessário
+  ul = document.getElementById("Lista"); // Adjust to the correct ID if needed
 
   filter = input.value.toUpperCase();
 
@@ -49,12 +37,15 @@ function filtrar() {
           return `<strong>${match}</strong>`;
         });
       }
-
     } else {
       li[i].style.display = "none";
     }
   }
 
-  ul.style.display = count === 0 ? "none" : "block";
+  // Hide the list if no matches found
+  if (count === 0 || input.value.trim() === "") {
+    ul.style.display = "none";
+  } else {
+    ul.style.display = "block";
+  }
 }
-
