@@ -1,6 +1,6 @@
 const { connSequelize } = require('../../config/coneccao')
 const { DataTypes} = require ('sequelize')
-const { _padraoTableBDExistence } = require('../../config/confdobanco')
+const { _padraoTableBDExistence } = require('../../config/confdobanco.js')
  
 tb_usuario = connSequelize.define('tb_usuario', {
     cd_usuario: {

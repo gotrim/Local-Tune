@@ -1,11 +1,33 @@
-const express = require('express');
-const app = express();
-const loginRoutes = require('caminho/para/seu/arquivo/routes');
+const express = require('express')
+const app = express()
+const path = require('path')
+const mysql = require('mysql2')
+const hbs = require('express-hbs/lib/hbs')
+const {connSequelize, BD} = require('./config/coneccao')
 
-app.use(express.json()); // Para parsear JSON no corpo das requisições
-app.use('/api', loginRoutes); // Adicione suas rotas ao app
+
+connSequelize.sync()
+connSequelize.authenticate().then(() => {
+        console.log(`Conexao bem sucedido do Sequelize com Mysql ${BD}`)
+}).catch(erroConn => {
+    console.log(`Incapaz de se conectar ao banco ${BD}`, erroConn)
+})
+
+//para ir às rotas
+app.set('view engine', 'hbs')
+
+
+app.set( 'views', path.join(__dirname, 'src/views'))
+
+const publicDirectory = path.join(__dirname, 'src/public')
+app.use(express.static(publicDirectory))
+
+
+app.use('/', require ('./src/routes/rotas'))
+
+app.use('/auth', require ('./src/routes/auth'))
 
 // Inicia o servidor
-app.listen(3000, () => {
-    console.log('Servidor rodando na porta 3307');
+app.listen(5800, async() => {
+    console.log('Servidor rodando na porta 5800')
 });
