@@ -2,7 +2,7 @@ const { connSequelize } = require('../../config/coneccao')
 const { DataTypes} = require ('sequelize')
 const { _padraoTableBDExistence } = require('../../config/confdobanco')
 
-tb_tipoMusical = connSequelize.define('tb_tipoMusical',{
+const tb_tipoMusical = connSequelize.define('tb_tipoMusical',{
     cd_tipoMusical:{
         type:DataTypes.INTEGER,
         allowNull:false,
@@ -13,10 +13,7 @@ tb_tipoMusical = connSequelize.define('tb_tipoMusical',{
         type:DataTypes.TEXT(30),
         allowNull:false
     },
-    
-
-}, _padraoTableBDExistence('tb_tipoMusical')
-)
+}, _padraoTableBDExistence('tb_tipoMusical'))
 
 module.exports ={
     tb_tipoMusical

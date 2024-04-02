@@ -4,7 +4,6 @@ const express = require('express')
 const {tb_contato} = require ('../models/modeloContato')
 
 
-
 connSequelize.sync()
 
 async function runServer() {

@@ -11,7 +11,6 @@ const tb_contato = connSequelize.define('tb_contato', {
     },
     nr_Celular: {
         type: DataTypes.STRING(11),
-        allowNull: true
     },
     nm_email: {
         type: DataTypes.STRING(60),

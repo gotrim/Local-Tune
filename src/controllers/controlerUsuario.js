@@ -1,28 +1,18 @@
-const { connSequelize } = require('../../config/coneccao')
-const { DataTypes} = require ('sequelize')
-const { _padraoTableBDExistence } = require('../../config/confdobanco')
- 
-tb_usuario = connSequelize.define('tb_usuario', {
-    cd_usuario: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
-    },
-    nm_usuario:{
-        type:DataTypes.TEXT(30),
-        allowNull: false
-    } ,
-    nm_email: {
-        type:DataTypes.TEXT(70),
-        allowNull: false
-    },
-    cd_senha: {
-        type: DataTypes.STRING(16),
-        allowNull: false
-    }
-}, _padraoTableBDExistence('tb_usuario'));
- 
-module.exports = {
-    tb_usuario
-};
+const { connSequelize, BD } = require('../../config/coneccao')
+const mysql = require('mysql2')
+const express = require('express')
+const {tb_usuario} = require ('../models/modeloUsuario')
+
+
+connSequelize.sync()
+
+async function runServer() {
+
+    let resultBusca =  await tb_usuario.findAll({
+        raw: true
+    })
+
+    console.log(resultBusca) 
+}
+
+runServer()

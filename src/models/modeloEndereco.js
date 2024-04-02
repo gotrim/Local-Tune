@@ -2,7 +2,7 @@ const { connSequelize } = require('../../config/coneccao')
 const { DataTypes} = require ('sequelize')
 const { _padraoTableBDExistence } = require('../../config/confdobanco')
 
-tb_endereco = connSequelize.define('tb_endereco', {
+const tb_endereco = connSequelize.define('tb_endereco', {
     cd_endereco: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -26,6 +26,7 @@ tb_endereco = connSequelize.define('tb_endereco', {
         allowNull: false
     }
 }, _padraoTableBDExistence('tb_endereco'));
+
 module.exports = {
     tb_endereco
 };
