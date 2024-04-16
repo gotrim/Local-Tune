@@ -1,0 +1,67 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+#voltar-btn{
+    display: flex;
+    padding-left: 5%;
+    padding-top: 2%;
+}
+
+#voltar-btn a {
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+#voltar-btn a:hover {
+    background-color: #555;
+}
+
+
+#login {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#login h1 {
+    margin-bottom: 20px;
+}
+
+#login-form {
+    display: inline-block;
+    text-align: left;
+}
+
+#login-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #555;
+}

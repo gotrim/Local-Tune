@@ -1,0 +1,79 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: left;
+    position: relative;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 10px 20px;
+    margin: 0;
+    display: none; /* Alterado para 'display: none;' */
+    flex-direction: column; /* Alinhamento vertical */
+    position: absolute; /* Posicionamento relativo ao header */
+    background-color: #333;
+    width: 100%;
+    top: 40px;
+    left: 0;
+    z-index: 100;
+}
+
+header nav ul.active {
+    display: flex;
+}
+
+header nav ul li {
+    margin: 5px 0;
+    padding-right: 25%;
+    text-align: center; /* Centraliza o texto */
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#home {
+    text-align: center;
+}
+
+#menu-btn {
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 30px;
+}
+
+#menu-btn.close { /* Estilização do botão quando transformado em 'X' */
+    content: 'X';
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    header nav ul {
+        display: flex; /* Sempre visível em telas grandes */
+        flex-direction: row; /* Alinhamento horizontal */
+        position: static; /* Retira o posicionamento absoluto */
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+        padding: 0px;
+        text-align: left; /* Alinha com o botão */
+    }
+
+    #menu-btn {
+        display: none; /* Oculta o botão em telas grandes */
+    }
+}
