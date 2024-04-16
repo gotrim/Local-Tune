@@ -37,6 +37,11 @@ body, html {
 #login-form {
     display: inline-block;
     text-align: left;
+    width: 300px; /* Ajuste conforme necessário */
+    background-color: #a188ee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: -15px 15px 0px rgb(235 16 16 / 38%);
 }
 
 #login-form label {
@@ -46,7 +51,7 @@ body, html {
 
 #login-form input[type="text"],
 #login-form input[type="password"] {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
