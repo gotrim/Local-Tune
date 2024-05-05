@@ -1,12 +1,12 @@
-document.getElementById('menu-btn').addEventListener('click', function() {
-    var navbar = document.getElementById('navbar').getElementsByTagName('ul')[0];
-    if (navbar.classList.contains('active')) {
-        navbar.classList.remove('active');
-        this.classList.remove('close');
-        this.textContent = 'Menu'; // Botão volta a mostrar 'Menu'
+function barra() {
+    var menu = document.getElementById('menu-hamburguer');
+    menu.classList.toggle('active');
+
+    if (menu.classList.contains('active')) {
+        document.getElementById("esquerda").style.width = "calc(60% - 100px)";
+        document.getElementById("conteudo-barra").style.display = "block";
     } else {
-        navbar.classList.add('active');
-        this.classList.add('close');
-        this.textContent = 'X'; // Muda o texto do botão para 'X'
+        document.getElementById("esquerda").style.width = "60px";
+        document.getElementById("conteudo-barra").style.display = "none";
     }
-});
+}
